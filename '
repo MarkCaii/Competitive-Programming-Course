@@ -29,6 +29,7 @@ int findMin(ll start, ll end){
 		return 0;
 	}else{
 		if(dp[start][end] == -1){
+			cout << start << " " << end << endl;
 			dp[start][end] = 1 + min(findMin(start, end-1), findMin(start+1, end));
 		}
 		return dp[start][end];
